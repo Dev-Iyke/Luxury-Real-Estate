@@ -30,11 +30,15 @@ export default {
   align-items: center;
   justify-content: space-around;
   background-blend-mode: overlay;
-  background: hsla(0, 0%, 1%, 0.2);
-;
-  padding: .6rem 0;
+  background: hsla(0, 0%, 1%, 0.2);;
+  padding: 1.2rem 0;
   text-transform: uppercase;
 
+}
+h1 a{
+  text-decoration: none;
+  font-size: 1rem;  color: white;
+  font-weight: 100;
 }
 nav ul{
   display: flex;
@@ -53,10 +57,8 @@ nav ul li a{
 }
 header h1{
 font-size: 1rem;
-font-weight: 500;
 letter-spacing: 4px;
 text-align: center;
-color: white;
 }
 
 </style>

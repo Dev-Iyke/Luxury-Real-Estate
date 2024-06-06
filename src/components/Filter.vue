@@ -52,7 +52,7 @@ export default {
     justify-content: center;
     background-color: white;
     border-radius: 10px;
-    padding: .6rem 0 .3rem;
+    padding: .5rem .3rem .3rem 0;
     border-bottom: 5px solid hsla(36, 22%, 73%, 1);
     box-shadow: 0px 20px 0px 0px hsla(215, 20%, 12%, 0.72);
     width: 60%;
