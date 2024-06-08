@@ -19,9 +19,9 @@ export default {
 
   setup(){
     const villas = ref([
-      {price: "From £280 / daily", country: "US", site: "seaside", title: "venice", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 1},
-      {price: "From 3280 / daily", country: "US", site: "roadside", title: "lagos", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 2},
-      {price: "From 4280 / daily", country: "US", site: "hillside", title: "abuja", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 3}
+      {price: "£280 / daily", country: "US", site: "seaside", title: "venice", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 1},
+      {price: "3280 / daily", country: "US", site: "roadside", title: "lagos", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 2},
+      {price: "4280 / daily", country: "US", site: "hillside", title: "abuja", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 3}
     ])
 
     return {villas:villas}

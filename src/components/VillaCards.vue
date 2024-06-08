@@ -3,7 +3,7 @@
   <div class="villa-card">
     <div class="img">
         <div class="info">
-            <p><!--  From £280 / daily -->{{ villa.price }}</p>
+            <p> From <span>{{ villa.price }}</span></p>
             <div class="fav"><img src="../assets/villa-files/Fav.png" alt="fav"></div>
         </div>
     </div>
@@ -60,6 +60,7 @@ export default {
         width: 300px;
         margin: .7rem;
         border-radius: 8px 8px 30px 8px;
+        font-family: "Raleway", sans-serif;
     }
     .villa-card .img{
         height: 250px;
@@ -83,6 +84,9 @@ export default {
         font-size: 12px;
         font-weight: 500;
         line-height: 20px;
+    }
+    .villa-card .img .info span{
+        font-weight: bold;
     }
     /***** Location section */
     .location{
@@ -112,7 +116,7 @@ export default {
         grid-template-columns: repeat(2, 1fr);
         row-gap: .7rem;
         padding: .2rem 1rem 1rem;
-        font-family: "Raleway", sans-serif;
+        
     }
     .details>div{
         display: flex;
