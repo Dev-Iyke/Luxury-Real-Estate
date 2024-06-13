@@ -24,13 +24,17 @@
       <p>Fusce blandit magna eget felis dapibus, ac lacinia quam faucibus. Quisque feugiat felis a quam volutpat, non scelerisque nibh scelerisque.</p>
     </div>
     <div class="regions-imgs">
-      <div>
-        <h2>Mountains</h2>
-        <p><span>87</span> properties</p>
+      <div class="regions-bg">
+        <div class="details">
+          <h2>Mountains</h2>
+          <p><span>87</span> properties</p>
+        </div>   
       </div>
-      <div>
-        <h2>Coastline</h2>
-        <p><span>64</span> properties</p>
+      <div class="regions-bg">
+        <div class="details">
+          <h2>Coastline</h2>
+          <p><span>64</span> properties</p>
+        </div>  
       </div>
     </div>
   </div>
@@ -38,7 +42,29 @@
   <div class="specialization">
     <h2>Our properties specialties</h2>
     <div class="spe">
-      <Specialties />
+      <Specialties :specialty="specialties"/>
+    </div>
+  </div>
+
+  <div class="host">
+    <div>
+      <p>BECOME A HOST</p>
+      <h2>Become a host</h2>
+      <p>Join the elite league of  hosts specializing in luxury villas and unlock a world of exclusive opportunities.</p>
+      <button class="join">JOIN TODAY</button>
+    </div>
+  </div>
+
+  <div class="about-us">
+    <div class="about-info">
+      <p>Curabitur efficitur ante vel mi bibendum, et maximus nisl ultricies. Morbi nec tempus dui, sit amet facilisis nisl. </p>
+      <p>Ut vel urna quis urna tristique tempus. Etiam lobortis est at mauris eleifend, id tempor purus ultricies.</p>
+      <p>Curabitur efficitur luctus enim nec sollicitudin. Fusce venenatis venenatis lorem eu accumsan. Nunc sit amet mi vitae odio porttitor feugiat. Sed quis sem elementum, viverra ligula at, lobortis magna. Praesent congue nibh in dolor rutrum, et euismod quam elementum.</p>
+      <p>Mauris justo felis, iaculis quis sagittis sit amet, feugiat vitae est. Aliquam porta ex elit, sit amet rutrum turpis egestas viverra. Quisque at libero purus.</p>
+      <p>We strive to offer you best possible homes to stay.  </p>
+    </div>
+    <div class="about-imgs">
+      <img src="../assets/about-tgp.png" alt="">
     </div>
   </div>
 </template>
@@ -60,13 +86,23 @@ export default {
       {price: "4280 / daily", country: "US", site: "hillside", title: "abuja", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 3}
       ])
 
-      return {villas:villas}
+      const specialties = ref([
+        {speImage: require('../assets/specialties-files/sea.png'), type: "Sea Front", benefit: "have a look", id: 1},
+        {speImage: require('../assets/specialties-files/pet.png'), type: "Pet Friendly", benefit: "pets allowed", id: 2},
+        {speImage: require('../assets/specialties-files/electric-car.png'), type: "Electric Car", benefit: "charge your car", id: 3},
+        {speImage: require('../assets/specialties-files/gym.png'), type: "Fitness/Gym", benefit: "work out", id: 4},
+        {speImage: require('../assets/specialties-files/boat.png'), type: "Boat mooring", benefit: "take a trip", id: 5}
+      ])
+
+      return {villas:villas, specialties:specialties}
     }
 }
 </script>
 
-<style>
+<style scoped>
 
+
+/****HERO SECTION */
   .hero{
     height: 107vh;
     background-image: url('../assets/home1.png');
@@ -126,6 +162,123 @@ export default {
     margin: 0 auto;
     }
 
-    /******** REGION SECTION */
+/******** REGION SECTION */
+  .regions{
+    font-family: "Raleway", sans-serif;
+    background-color: #C9BDAB;
+    padding: 3.5rem 0 6rem;
+    border-radius: 0px 10px 80px 10px;
+  }
+  .regions-info{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .regions-info h2{
+    font-size: 2.6rem;
+    color: #181D24;
+  }
+  .regions-info p{
+    font-size: .8rem;
+    margin: .8rem 0
+  }
+  .regions-imgs{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .7rem;
+  }
+  .regions-bg{
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .regions-imgs>div:nth-of-type(1){
+    background-image: url('../assets/region-files/mountains.png');
+    border-radius: 5px 40px 5px 40px;
+  }
+  .regions-imgs>div:nth-of-type(2){
+    background-image: url('../assets/region-files/coastline.png');
+    border-radius: 40px 5px 40px 5px;
+  }
+  .regions-bg .details{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    left: 20px;
+    color: white;
+  }
+  .regions-bg .details h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .regions-bg .details span{
+    font-weight: bold;
+  }
+  .regions-bg .details p{
+    font-weight: 200;
+    font-size: .85rem;
+  }
+
+/*******SPECIALIZATION SECTION */
+  .specialization{
+    padding: 7.5rem 0;
+  }
+  .specialization h2{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .spe{
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+/******** HOST SECTION */
+.host{
+    background-image: url('../assets/host-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 6rem 0;
+    margin: 3rem 0;
+    border-radius: 0px 10px 80px 10px;
+    font-family: "Raleway", sans-serif;
+  }
+  .host div{
+    width: 32%;
+    margin: 0 auto;
+    color: #181D24;
+    background-color: hsla(0, 0%, 100%, 0.88);
+    border-radius: 40px 4px 40px 4px;
+    padding: 4rem 3rem;
+    text-align: center
+  }
+  .host h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: .3rem 0 2rem;
+  }
+  .host p{
+    font-size: .8rem;
+  }
+  .host button{
+    margin-top: 1.3rem;
+    background-color: #5B656F;
+    width: 100%;
+    color: #eee;
+    padding: .75rem 0;
+    border: none;
+    border-radius: 0px 10px 10px 10px;
+  }
 
 </style>

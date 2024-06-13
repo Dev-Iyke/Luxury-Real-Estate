@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .filter{
     display: flex;
     align-items: center;

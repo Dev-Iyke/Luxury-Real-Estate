@@ -8,30 +8,30 @@
         </div>
     </div>
     <div class="location">
-        <span><!-- Italy -->{{ villa.country }}</span>
+        <span>{{ villa.country }}</span>
         <span><img src="../assets/villa-files/Ellipse.png" alt=""></span>
-        <span><!-- Mountains -->{{ villa.site }}</span>
+        <span>{{ villa.site }}</span>
     </div>
-    <h2><!-- Villa Makarska -->{{ villa.title }}</h2>
+    <h2>{{ villa.title }}</h2>
     <div class="details">
         <div>
             <img src="../assets/villa-files/people.png" alt="guests">
-            <span><!-- 8 guests -->{{ villa.guests }}</span>
+            <span>{{ villa.guests }}</span>
             <span>guests</span>
         </div>
         <div>
             <img src="../assets/villa-files/single-bed.png" alt="bedrooms">
-            <span><!-- 8 bedrooms -->{{ villa.bedrooms }}</span>
+            <span>{{ villa.bedrooms }}</span>
             <span>bedrooms</span>
         </div>
         <div>
             <img src="../assets/villa-files/blueprint.png" alt="land">
-            <span><!-- 460 m<sup>2</sup> -->{{ villa.land }}</span>
+            <span>{{ villa.land }}</span>
             <span>m<sup>2</sup></span>
         </div>
         <div>
             <img src="../assets/villa-files/bath-tub.png" alt="bathrooms">
-            <span><!-- 4 bathrooms -->{{ villa.bathrooms }}</span>
+            <span>{{ villa.bathrooms }}</span>
             <span>bathrooms</span>
         </div>
     </div>
@@ -45,6 +45,7 @@ export default {
     name: 'VillaCards',
     props: ['villas'],
 
+    
     setup(props) {
         console.log(props)
 
@@ -52,9 +53,7 @@ export default {
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-    
+<style scoped>
     .villa-card{
         background-color: #fff;
         width: 300px;
