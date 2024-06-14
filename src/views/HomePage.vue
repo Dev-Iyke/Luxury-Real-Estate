@@ -55,17 +55,8 @@
     </div>
   </div>
 
-  <div class="about-us">
-    <div class="about-info">
-      <p>Curabitur efficitur ante vel mi bibendum, et maximus nisl ultricies. Morbi nec tempus dui, sit amet facilisis nisl. </p>
-      <p>Ut vel urna quis urna tristique tempus. Etiam lobortis est at mauris eleifend, id tempor purus ultricies.</p>
-      <p>Curabitur efficitur luctus enim nec sollicitudin. Fusce venenatis venenatis lorem eu accumsan. Nunc sit amet mi vitae odio porttitor feugiat. Sed quis sem elementum, viverra ligula at, lobortis magna. Praesent congue nibh in dolor rutrum, et euismod quam elementum.</p>
-      <p>Mauris justo felis, iaculis quis sagittis sit amet, feugiat vitae est. Aliquam porta ex elit, sit amet rutrum turpis egestas viverra. Quisque at libero purus.</p>
-      <p>We strive to offer you best possible homes to stay.  </p>
-    </div>
-    <div class="about-imgs">
-      <img src="../assets/about-tgp.png" alt="">
-    </div>
+  <div class="about">
+    <AboutUs />
   </div>
 </template>
 
@@ -74,11 +65,12 @@ import NavBar from '../components/NavBar.vue'
 import Filter from '../components/Filter.vue'
 import VillaCards from '../components/VillaCards.vue'
 import Specialties from '../components/Specialties.vue'
+import AboutUs from '../components/AboutUs.vue'
 
 import {ref} from 'vue'
 export default {
   name: "HomePage",
-    components: {NavBar, Filter, VillaCards, Specialties},
+    components: {NavBar, Filter, VillaCards, Specialties, AboutUs},
     setup(){
       const villas = ref([
       {price: "£280 / daily", country: "US", site: "seaside", title: "venice", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 1},
@@ -133,7 +125,7 @@ export default {
   
 /******* TOP PICK SECTION */
   .top-pick{
-    background-color: #e1e1e1;
+    background-color: #f5f3f1;
     padding: 5.5rem 0;
     display: flex;
     flex-direction: column;
@@ -167,7 +159,7 @@ export default {
     font-family: "Raleway", sans-serif;
     background-color: #C9BDAB;
     padding: 3.5rem 0 6rem;
-    border-radius: 0px 10px 80px 10px;
+    border-radius: 0px 1px 80px 10px;
   }
   .regions-info{
     width: 40%;
@@ -228,6 +220,7 @@ export default {
 /*******SPECIALIZATION SECTION */
   .specialization{
     padding: 7.5rem 0;
+  /*   background-color: #f5f3f1; */
   }
   .specialization h2{
     font-size: 2rem;
