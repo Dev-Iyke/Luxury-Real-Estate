@@ -22,19 +22,18 @@ export default {
 <style scoped>
   .specialties{
     border-right: 1px solid #C9BDAB;
-    /* border-right: 1px solid black; */
     padding-right: 2rem;
     display: flex;
     flex-direction: column;
+    font-family: "Rufina", sans-serif
   }
   .specialties>div img{
     width: 22px;
     height: 22px;
   }
-  .specialization .last-item{
+  .last-item .specialties{
     padding-right: 0;
     border-right: none;
-    /* background-color: red; */
   }
   .specialties h3{
     font-weight: 600;
@@ -44,10 +43,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: left;
-    font-size: .8rem;
+    font-size: .6rem;
+    font-weight: 600;
     margin-top: .3rem;
     color: #5B656F;
     gap: .3rem;
+    font-family: "Raleway", sans-serif
   }
   
 </style>

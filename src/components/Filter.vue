@@ -2,7 +2,7 @@
   <div class="filter">
       <div class="opt">
         <select name="location" id="location">
-          <option value="null">Location</option>
+          <option value="null" class="def">Location</option>
           <option value="seaside">Seaside</option>
           <option value="countrySide">Countryside</option>
           <option value="village">Village</option>
@@ -57,6 +57,7 @@ export default {
     box-shadow: 0px 20px 0px 0px hsla(215, 20%, 12%, 0.72);
     width: 60%;
     margin: 0 auto;
+    font-family: "Raleway", sans-serif;
   }
   .opt{
     padding: 0 1rem 0 .5rem;
@@ -66,8 +67,7 @@ export default {
     border: none; 
     padding: .6rem 3.5rem .6rem 0;
     font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
+    font-weight: 300;
     outline: none;
   }
   .btn button{

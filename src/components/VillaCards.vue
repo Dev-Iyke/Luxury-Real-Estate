@@ -74,6 +74,7 @@ export default {
         align-items: center;
         justify-content: space-between;
         padding: .5rem 0 0 1rem;
+        font-family: "Rufina", sans-serif;
     }
     .villa-card .img .info p{
         background-color: #F5E9D6;
@@ -96,18 +97,19 @@ export default {
         padding: .4rem 1rem;
     }
     .location span:nth-of-type(1){
-        font-weight: 600;
-        font-size: .8rem;
+        font-weight: 700;
+        font-size: .7rem;
     }
     .location span:nth-of-type(3){
         font-size: .7rem;
     }
     .villa-card h2{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 700;
         margin-bottom: .2rem;
         padding: 0 1rem;
+        font-family: "Rufina", sans-serif;
     }
     /***** Details section */
     .details{

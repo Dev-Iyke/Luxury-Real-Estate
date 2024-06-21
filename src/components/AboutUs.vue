@@ -26,16 +26,16 @@ name: "AboutUs"
 
 <style scoped>
 .about-us{
-    background-color: #f4f1ed;
     width: 75%;
     margin: 0 auto;
     margin-top: 10rem;
     margin-bottom: 6rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Rufina", sans-serif
 }
 .about-us h1{
     font-size: 2.5rem;
     font-weight: 600;
+    
 }
  .about-flex {
     display: flex;
@@ -57,7 +57,8 @@ name: "AboutUs"
     width: 75%;
     font-size: .8rem;
     line-height: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
   }
   .about-info>p{
     margin-top: 2.5rem;

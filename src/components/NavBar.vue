@@ -24,21 +24,22 @@ export default {
 </script>
 
 <style scoped>
-    header {
+header {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-around;
   background-blend-mode: overlay;
   background: hsla(0, 0%, 1%, 0.2);;
-  padding: 1.2rem 0;
+  padding: .6rem 0;
   text-transform: uppercase;
 
 }
 h1 a{
   text-decoration: none;
-  font-size: 1rem;  color: white;
-  font-weight: 100;
+  font-size: .9rem;  color: white;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
 }
 nav ul{
   display: flex;
@@ -51,14 +52,12 @@ nav ul li{
 }
 nav ul li a{
   text-decoration: none;
-  font-family: Raleway;
+  font-family: "Rufina", serif;
   color: white;
   font-size: .8rem;
 }
 header h1{
-font-size: 1rem;
 letter-spacing: 4px;
 text-align: center;
 }
-
 </style>

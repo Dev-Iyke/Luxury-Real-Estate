@@ -1,4 +1,5 @@
 <template>
+  <div class="home">
   <div class="hero">
     <NavBar/>
     <div class="hero-info">
@@ -58,6 +59,12 @@
   <div class="about">
     <AboutUs />
   </div>
+
+  <div class="footer">
+    <Contact />
+    <FooterBtm />
+  </div>
+</div>
 </template>
 
 <script>
@@ -66,11 +73,13 @@ import Filter from '../components/Filter.vue'
 import VillaCards from '../components/VillaCards.vue'
 import Specialties from '../components/Specialties.vue'
 import AboutUs from '../components/AboutUs.vue'
+import FooterBtm from '../components/FooterBtm.vue'
+import Contact from '../components/Contact.vue'
 
 import {ref} from 'vue'
 export default {
   name: "HomePage",
-    components: {NavBar, Filter, VillaCards, Specialties, AboutUs},
+    components: {NavBar, Filter, VillaCards, Specialties, AboutUs, FooterBtm, Contact},
     setup(){
       const villas = ref([
       {price: "£280 / daily", country: "US", site: "seaside", title: "venice", guests: 2, bedrooms: 4, land: 420, bathrooms:3, id: 1},
@@ -93,13 +102,16 @@ export default {
 
 <style scoped>
 
+.home{
+  background-color: #f5f3f1;
+  color: black;
+}
 
 /****HERO SECTION */
   .hero{
     height: 107vh;
     background-image: url('../assets/home1.png');
     background-blend-mode: multiply;
-    background-color: #e1e1e1;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -112,7 +124,7 @@ export default {
     font-size: 3.7rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    font-family: Rufina;
+    font-family: "Rufina", sans-serif
   }
   .hero-info span{
     background: hsla(0, 0%, 100%, 0.94);
@@ -121,31 +133,32 @@ export default {
     font-weight: 500;
     border-radius: 0 5px 5px 5px;
     letter-spacing: 2px;
+    font-family: "Raleway", sans-serif;
   }
   
 /******* TOP PICK SECTION */
   .top-pick{
-    background-color: #f5f3f1;
     padding: 5.5rem 0;
     display: flex;
     flex-direction: column;
   }
   .top-pick-info{
     text-align: center;
-    color: #333;
+    color: black;
     width: 50%;
     margin: 0 auto;
     margin-bottom: 3rem;
   }
   .top-pick-info h2{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
+    font-family: "Rufina", sans-serif;
   }
   .top-pick-info p{
     font-size: .8rem;
     font-weight: 500;
-  /*   margin-bottom: 1rem; */
+  font-family: "Raleway", sans-serif;
   }
   .all-cards{
     display: grid;
@@ -169,6 +182,7 @@ export default {
   .regions-info h2{
     font-size: 2.6rem;
     color: #181D24;
+    font-family: "Rufina", sans-serif
   }
   .regions-info p{
     font-size: .8rem;
@@ -208,6 +222,7 @@ export default {
   .regions-bg .details h2{
     font-size: 2.5rem;
     font-weight: 500;
+    font-family: "Rufina", sans-serif
   }
   .regions-bg .details span{
     font-weight: bold;
@@ -220,12 +235,12 @@ export default {
 /*******SPECIALIZATION SECTION */
   .specialization{
     padding: 7.5rem 0;
-  /*   background-color: #f5f3f1; */
   }
   .specialization h2{
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
+    font-family: "Rufina", sans-serif
   }
   .spe{
       width: 75%;
@@ -235,6 +250,7 @@ export default {
       align-items: center;
       gap: 2rem;
     }
+    
   
 /******** HOST SECTION */
 .host{
@@ -257,12 +273,14 @@ export default {
     text-align: center
   }
   .host h2{
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: .3rem 0 2rem;
+    font-family: "Rufina", sans-serif
   }
   .host p{
-    font-size: .8rem;
+    font-size: .7rem;
+    font-weight: 500
   }
   .host button{
     margin-top: 1.3rem;
