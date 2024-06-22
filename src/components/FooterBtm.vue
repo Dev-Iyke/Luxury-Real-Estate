@@ -37,7 +37,7 @@ export default {
 <style>
  .footer-cont{
   background-color:#DFE3E7;
-  padding: 12rem 0 5rem;
+  padding: 15rem 0 5rem;
   font-family: "Raleway", sans-serif;
  }
   .footer-cont .cont{

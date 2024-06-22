@@ -61,7 +61,8 @@
   </div>
 
   <div class="footer">
-    <Contact />
+    <div class="footer-img"><img src="../assets/footer-imgs/footer-img.png" alt=""></div>
+    <Contact class="contact-section" />
     <FooterBtm />
   </div>
 </div>
@@ -291,5 +292,16 @@ export default {
     border: none;
     border-radius: 0px 10px 10px 10px;
   }
+
+  /******** FOOTER SECTION */
+  /** Contact section */
+ .footer{
+  position: relative;
+ }
+ .contact-section{
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+ }
 
 </style>
